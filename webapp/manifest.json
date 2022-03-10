@@ -25,6 +25,11 @@
 					"manifest.json"
 				]
 			}
+		},
+		"resources": {
+			"css": [{
+				"uri": "style.css"
+			}]
 		}
 	}
 }
