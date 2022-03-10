@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@ui5/cli": "^2.14.1"
+    "@ui5/cli": "^2.14.6"
   }
 }
