@@ -6,7 +6,8 @@
 	<Tree
 		id="Tree"
 		items="{path: '/'}"
-		mode="MultiSelect">
+		mode="MultiSelect"
+		class="MultiSelectSelective">
 		<StandardTreeItem title="{text}">
 			<customData>
 				<core:CustomData
