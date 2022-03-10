@@ -10,7 +10,22 @@ sap.ui.define(['sap/ui/core/mvc/Controller', 'sap/ui/model/json/JSONModel'],
 		},
 		sSelectable: function (aNodes) {
 			return String(Array.isArray(aNodes));
-		}
+		},
+		onTreeToggleOpenState: function (oEvent) {
+			var nCurrentIndex = oEvent.getParameter("itemIndex");
+			var oItemsBinding = oEvent.getSource().getBinding("items");
+			var oCurrentNode = oItemsBinding.findNode(nCurrentIndex);
+			var oExpandedStateObject = oItemsBinding._mTreeState.expanded;
+			for (var sNodeId in oExpandedStateObject) {
+                if (Object.hasOwnProperty.call(oExpandedStateObject, sNodeId)) {
+                    var oNode = oExpandedStateObject[sNodeId];
+                    if (oCurrentNode.groupID.indexOf(oNode.groupID) === -1) {
+                        oNode.expanded = false;
+                    }
+                }
+            }
+			oItemsBinding._fireChange(); // ToDo: Is there a better way?
+		},
 	});
 
 	return PageController;

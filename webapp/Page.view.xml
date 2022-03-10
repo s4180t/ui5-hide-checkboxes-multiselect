@@ -7,7 +7,8 @@
 		id="Tree"
 		items="{path: '/'}"
 		mode="MultiSelect"
-		class="MultiSelectSelective">
+		class="MultiSelectSelective"
+		toggleOpenState="onTreeToggleOpenState">
 		<StandardTreeItem title="{text}">
 			<customData>
 				<core:CustomData
