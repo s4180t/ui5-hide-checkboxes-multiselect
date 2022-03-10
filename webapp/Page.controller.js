@@ -8,7 +8,7 @@ sap.ui.define(['sap/ui/core/mvc/Controller', 'sap/ui/model/json/JSONModel'],
 			var oModel = new JSONModel(sap.ui.require.toUrl("sap/m/sample/Tree") + "/Tree.json");
 			this.getView().setModel(oModel);
 		},
-		bSelectable: function (aNodes) {
+		sSelectable: function (aNodes) {
 			return String(Array.isArray(aNodes));
 		}
 	});
